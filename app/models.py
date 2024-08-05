@@ -11,3 +11,13 @@ class CryptoData(db.Model):
 
     def __repr__(self):
         return f'<CryptoData {self.symbol}>'
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'symbol': self.symbol,
+            'price': self.price,
+            'volume_24h': self.volume_24h,
+            'percent_change_24h': self.percent_change_24h,
+            'timestamp': self.timestamp.isoformat()
+        }
