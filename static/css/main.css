@@ -1,0 +1,13 @@
+@import 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css';
+
+.chart-container {
+    height: 400px;
+}
+
+.prediction-card, .signal-card {
+    transition: all 0.3s ease;
+}
+
+.prediction-card:hover, .signal-card:hover {
+    transform: scale(1.05);
+}
