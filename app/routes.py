@@ -1,7 +1,6 @@
-from flask import render_template
+from flask import render_template, current_app
 from app import db
 from app.models import CryptoData
-from flask import current_app
 
 @current_app.route('/')
 def index():
