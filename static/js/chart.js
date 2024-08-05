@@ -11,7 +11,8 @@ function createChart(data) {
     const layout = {
         title: 'Crypto Prices',
         xaxis: { title: 'Cryptocurrency' },
-        yaxis: { title: 'Price (USD)' }
+        yaxis: { title: 'Price (USD)' },
+        responsive: true
     };
 
     Plotly.newPlot('chart', [trace], layout);
