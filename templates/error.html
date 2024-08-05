@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error {{ error_code }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold mb-8">Error {{ error_code }}</h1>
+        <p class="text-xl">{{ error_message }}</p>
+        <a href="{{ url_for('index') }}" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded">Go back to homepage</a>
+    </div>
+</body>
+</html>
