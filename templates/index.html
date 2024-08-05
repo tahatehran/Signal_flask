@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Crypto Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}">
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-4xl font-bold mb-8">Advanced Crypto Dashboard</h1>
-        <div id="chart" class="mb-8 bg-white p-4 rounded shadow"></div>
-        <div class="grid grid-cols-2 gap-8">
-            <div id="predictions" class="bg-white p-4 rounded shadow"></div>
-            <div id="signals" class="bg-white p-4 rounded shadow"></div>
+        <div id="chart" class="mb-8 bg-white p-4 rounded shadow chart-container"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div id="predictions" class="bg-white p-4 rounded shadow prediction-card"></div>
+            <div id="signals" class="bg-white p-4 rounded shadow signal-card"></div>
         </div>
     </div>
 
