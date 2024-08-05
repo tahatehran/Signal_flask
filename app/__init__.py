@@ -1,10 +1,10 @@
+import logging
+from logging.handlers import RotatingFileHandler
+import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from config import Config
-import logging
-from logging.handlers import RotatingFileHandler
-import os
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -39,3 +39,5 @@ def create_app(config_class=Config):
         app.logger.info('Crypto Dashboard startup')
 
     return app
+
+from app import models
